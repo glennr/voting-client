@@ -1,29 +1,22 @@
 {
-  // I want to use babel-eslint for parsing!
-  "parser": "babel-eslint",
-  "env": {
-    // I write for browser
-    "browser": true,
-    // in CommonJS
-    "node": true
-  },
-  // To give you an idea how to override rule :
+  "parser": "babel-eslint", // I want to use babel-eslint for parsing!
   "rules": {
+    "indent": [2, 2, {
+      indentSwitchCase: true
+    }],
+    "jsx-quotes": 1,
+    "linebreak-style": [2, "unix"],
     "quotes": [2, "single"],
-    "eol-last": [0],
-    "no-mixed-requires": [0],
-    "no-underscore-dangle": [0],
     "react/display-name": 1,
     "react/forbid-prop-types": 1,
     "react/jsx-boolean-value": 1,
     "react/jsx-closing-bracket-location": 1,
     "react/jsx-curly-spacing": 1,
-    "react/jsx-indent-props": 1,
+    "react/jsx-indent-props": [2, 2],
     "react/jsx-max-props-per-line": 1,
     "react/jsx-no-duplicate-props": 1,
     "react/jsx-no-literals": 1,
     "react/jsx-no-undef": 1,
-    "jsx-quotes": 1,
     "react/jsx-sort-prop-types": 1,
     "react/jsx-sort-props": 1,
     "react/jsx-uses-react": 1,
@@ -41,12 +34,20 @@
     "react/require-extension": 1,
     "react/self-closing-comp": 1,
     "react/sort-comp": 1,
-    "react/wrap-multilines": 1
+    "react/wrap-multilines": 1,
+    "semi": [2, "never"]
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "mocha": true,
+  },
+  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "jsx": true,
+    "experimentalObjectRestSpread": true
   },
   "plugins": [
     "react"
-  ],
-  "ecmaFeatures": {
-    "jsx": true
-  }
+  ]
 }
