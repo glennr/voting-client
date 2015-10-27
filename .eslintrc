@@ -1,8 +1,9 @@
 {
   "parser": "babel-eslint", // I want to use babel-eslint for parsing!
   "rules": {
-    "indent": [2, 2],
-    // { indentSwitchCase: true }],
+    "indent": [2, 2, {
+      "SwitchCase": 1
+    }],
     "jsx-quotes": 1,
     "linebreak-style": [2, "unix"],
     "quotes": [2, "single"],
